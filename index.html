@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div id="pic">
+            <img src="moon.jpg">
+        </div>
+        <h1><i>AlgoVision</i></h1>
+        <div id="list">
+            <a href="">Home</a>
+            <a href="#codeBox">Visualize</a>
+            <a href="#select">Algorithms</a>
+            <a href="#about">About</a>
+            
+        </div>
+    </nav>
+    <h1>DSA Visualization</h1>
+    <div class="container">
+        <!-- Sidebar for Algorithms -->
+        <div class="sidebar">
+            <h3>Algorithms</h3>
+            <button onclick="selectAlgorithm('linearSearch')">Linear Search</button>
+            <button onclick="selectAlgorithm('binarySearch')">Binary Search</button>
+            <button onclick="selectAlgorithm('bubbleSort')">Bubble Sort</button>
+            <button onclick="selectAlgorithm('quickSort')">Quick Sort</button>
+            <button onclick="selectAlgorithm('mergeSort')">Merge Sort</button>
+            <button onclick="selectAlgorithm('insertionSort')">Insertion Sort</button>
+            <button onclick="selectAlgorithm('selectionSort')">Selection Sort</button>
+            <button onclick="selectAlgorithm('heapSort')">Heap Sort</button>
+        </div>
+        <!-- Visualization and Controls -->
+        <div class="visualization-container">
+            <div class="controls">
+                <label for="arraySizeInput">Enter Array Size:</label>
+                <input type="number" id="arraySizeInput" placeholder="e.g., 5">
+                <br>
+                <label for="arrayInput">Enter Array Elements (space-separated):</label>
+                <input type="text" id="arrayInput" placeholder="e.g., 10 5 2 8 1">
+                <br>
+                <label for="searchElement">Element to Search:</label>
+                <input type="number" id="searchElement" placeholder="e.g., 8">
+                <br>
+                <label for="speedControl">Speed:</label>
+                <input type="range" id="speedControl" min="50" max="1000" value="500">
+                <span id="speedValue">500ms</span>
+                <br>
+                <button onclick="startVisualization()">Visualize</button>
+            </div>
+            <div class="bars" id="bars"></div>
+            <!-- <div id="bars"></div> -->
+        </div>
+    </div>
+
+    <!-- Info Boxes -->
+    <div class="info-boxes">
+        <div class="info-box" id="codeBox">
+            <h4>Code</h4>
+            <pre id="codeContent">Click an algorithm to see the code</pre>
+        </div>
+        <div class="info-box" id="complexityBox">
+            <h4>Time and Space Complexity</h4>
+            <p id="complexityContent">Click an algorithm to see complexities</p>
+        </div>
+        <div class="info-box" id="theoryBox">
+            <h4>Theory</h4>
+            <p id="theoryContent">Click an algorithm to see the theory</p>
+        </div>
+    </div>
+    <div id="select"></div>
+<div class="diagram">
+    <div class="box"> <div><h2>Linear Search</h2> </div>
+    <div class="img"><img src="linear.png"> </div>
+    </div> 
+    <div class="box"><div><h2>Linear Search</h2></div>
+    <div class="img"> <img src="binary.png"></div>
+    </div>
+    <div class="box"> <div><h2>Bubble Sort</h2></div>
+    <div class="img"> <img src="bubble.png"> </div>
+    </div>
+    <div class="box"> <div><h2>Quick Sort</h2></div>
+    <div class="img"><img src="quick.png"> </div> 
+    </div>
+</div>
+<div class="diagram">
+    <div class="box"> <div><h2>Merge Sort</h2></div>
+    <div class="img"> <img src="merge.png"> </div>
+    </div>
+    <div class="box"> <div><h2>Insertion Sort</h2></div>
+    <div class="img"> <img src="insertion.png"> </div>
+    </div>
+    <div class="box"> <div><h2>Selection Sort</h2></div>
+    <div class="img"><img src="selection.jpg"> </div> 
+    </div>
+    <div class="box"> <div><h2>Heap Sort</h2></div>
+    <div class="img"><img src="heap.png"> </div> 
+    </div>
+</div>
+<div id="about"><h2>ABOUT</h2>
+    <div id="about-box"><h3><H2>"Welcome to DSA Visualizer!"</H2><br>
+        This project is designed to help users understand and visualize the inner workings of fundamental Data Structures and Algorithms (DSA).
+        <br>
+        Key Features: <br>
+        
+        1. Interactive Visualization: <br>
+        Visualize sorting and searching algorithms step by step in real-time. <br>
+        
+        
+        2. User-Friendly Interface: <br>
+        A clean and intuitive interface to input data, select algorithms, and observe the process. <br>
+        
+        
+        3. Educational Content: <br>
+        Learn the theoretical concepts, code implementation, and complexity analysis of each algorithm. <br>
+        
+        
+        4. Custom Speed Control: <br>
+        Adjust the speed of the visualization to suit your learning pace. <br>
+        <h2>Purpose: </h2><br>
+        
+        This project aims to make learning DSA engaging, interactive, and accessible for students, programmers, and enthusiasts. By bridging the gap between theory and practice, we hope to empower users to master DSA concepts effectively. <br>
+        
+        Technology Stack: <br>
+        
+        Frontend: HTML, CSS, JavaScript <br>
+        </h3></div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 DSA Visualizer | All Rights Reserved</p>
+        <p>Designed and Developed by Chandni Poddar</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/chandni-poddar-466a32297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/ChandniPoddar" target="_blank">GitHub</a> |
+            <a href="mailto:your-email@example.com">Contact</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
